@@ -52,10 +52,20 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'Agents_Locations.urls'
 
+# Template Path Added for including App
+# Start
+
+SETTINGS_PATH = os.path.dirname(os.path.dirname(__file__))
+
+# TEMPLATE_DIRS = (
+#     os.path.join(SETTINGS_PATH, 'templates'),
+# )
+# # End
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(SETTINGS_PATH, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

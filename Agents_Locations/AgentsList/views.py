@@ -8,3 +8,8 @@ from django.http import HttpResponse
 def home(request):
     # return HttpResponse("<h1> Subu </h1>")
     return render(request,"AgentsList/index.html")
+
+def agentslist(request):
+    # return HttpResponse("<h1> Subu </h1>")
+
+    return render(request,"AgentsList/newyork.html")
