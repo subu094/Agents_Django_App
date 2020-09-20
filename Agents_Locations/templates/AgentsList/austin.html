@@ -1,2 +1,23 @@
 <!DOCTYPE html>
-<h1>Austin works</h1>
+<h1>Austin Nearest Agents</h1>
+<table>
+<tr>
+  <th>Name</th>
+  <th>Address</th>
+  <th>City</th>
+  <th>Zip Code</th>
+  <th>State</th>
+
+</tr>
+{% for key,values in distance_result.items %}
+
+    <tr>{% for b in key %}
+          <td>
+              {{ b }}
+          </td>
+{% endfor %}
+    </tr>
+{% endfor %}
+
+
+</table>

@@ -1,39 +1,23 @@
 <!DOCTYPE html>
-<h1>Newyork works</h1>
-<!--<ul>-->
-    <!--{% for x in ten_details %}-->
-    <!--<li>-->
-        <!--{{ x }}-->
-    <!--</li>-->
-    <!--{% endfor %}-->
-<!--</ul>-->
-
-<html lang="en">
-<!--<head>-->
-    <!--<meta charset="UTF-8">-->
-    <!--<title>List of Agents for city</title>-->
-<!--</head>-->
-<!--<body>-->
-<!--<h1>{{name_of_city}}</h1>-->
+<h1>NewYork Nearest Agents</h1>
 <table>
 <tr>
-    <th>Id</th>
   <th>Name</th>
   <th>Address</th>
   <th>City</th>
   <th>Zip Code</th>
   <th>State</th>
+
 </tr>
-{% for b in ten_details %}
-<tr>
-     <td>{{ b.id }}</td>
-      <td>{{ b.name }}</td>
-      <td>{{ b.address }}</td>
-      <td>{{ b.city }}</td>
-      <td>{{ b.zipcode }}</td>
-      <td>{{ b.state }}</td>
-</tr>
+{% for key,values in distance_result.items %}
+
+    <tr>{% for b in key %}
+          <td>
+              {{ b }}
+          </td>
 {% endfor %}
+    </tr>
+{% endfor %}
+
+
 </table>
-<!--</body>-->
-</html>
