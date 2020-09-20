@@ -7,3 +7,5 @@ class Agents_Details(models.Model):
     zipcode = models.CharField(max_length=10)
     city = models.CharField(max_length= 50)
     state = models.CharField(max_length=30)
+    latitude = models.FloatField(default=0.0)
+    longitude = models.FloatField(default=0.0)
